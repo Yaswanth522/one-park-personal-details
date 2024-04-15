@@ -5,18 +5,16 @@ function App() {
   const [formData, setFormData] = useState({
     name: "Jason",
     email: "jason@gmail.com",
-    phone: "jason@gmail.com",
+    phone: "+14096731904",
     company: "Yellow.ai",
     industry: "Healthcare",
   });
 
   const onChangeHandler = (e) => {
-    console.log(e);
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
-    console.log(formData);
   };
 
   const onSubmitHandler = (e) => {
@@ -44,7 +42,7 @@ function App() {
               type="text"
               id="name"
               name="name"
-              value="Jason"
+              value={formData.name}
               onChange={onChangeHandler}
               required
             />
@@ -57,7 +55,7 @@ function App() {
               type="email"
               id="email"
               name="email"
-              value="jason@gmail.com"
+              value={formData.email}
               onChange={onChangeHandler}
               required
             />
@@ -70,7 +68,7 @@ function App() {
               type="tel"
               id="phone"
               name="phone"
-              value="+14096731904"
+              value={formData.phone}
               onChange={onChangeHandler}
               required
             />
@@ -83,7 +81,7 @@ function App() {
               type="text"
               id="company"
               name="company"
-              value="Yellow.ai"
+              value={formData.company}
               onChange={onChangeHandler}
               required
             />
@@ -92,7 +90,7 @@ function App() {
         <div className="row">
           <div className="tf">
             <select
-              value="Healthcare"
+              value={formData.industry}
               className="form-inputs"
               name="industry"
               onChange={onChangeHandler}
