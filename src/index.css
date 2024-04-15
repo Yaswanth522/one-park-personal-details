@@ -1,7 +1,7 @@
 /* ------------------------------------------ BASIC RULES --*/
 *{
 	box-sizing: border-box;
-
+  background-color: white;
 }
 /* ------------------------------------------ LAYOUT RULES --*/
 
@@ -15,7 +15,7 @@ input[type="text"],input[type="email"],input[type="tel"],select
 	width:100%;
 	margin-bottom:2%;
 	margin-top:1%;
-	height:40px;
+	height:35px;
 	border-radius:5px;
 	border: 2px solid black;
 }
@@ -30,13 +30,10 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input
 }
 button
 {   
-    padding: auto;
-	width:20%;
+  padding: auto;
 	border-radius:5px;
 	border: 2px solid black;
-	font-weight:400;
-	font-size:25px;
-	margin:0 0 0 40%;
+	margin: auto
 }
 
 button:focus,button:hover
