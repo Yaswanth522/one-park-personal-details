@@ -67,7 +67,6 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <br />
           <div className="tf">
             <input
               type="text"
@@ -77,11 +76,9 @@ function App() {
               onChange = {onChangeHandler}
               required
             />
-            <br />
           </div>
         </div>
         <div className="row">
-          <label htmlFor="state">State</label>
           <div className="tf">
             <select
               value="Healthcare"
