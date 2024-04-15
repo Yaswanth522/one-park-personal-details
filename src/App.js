@@ -28,7 +28,6 @@ function App() {
     <div className="container">
       <form onSubmit={onSubmitHandler}>
         <div className="row">
-          <label htmlFor="name">Full Name</label>
           <div className="tf">
             <input
               type="text"
@@ -42,7 +41,6 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <label htmlFor="email">Email Address</label>
           <div className="tf">
             <input
               type="email"
@@ -56,7 +54,6 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <label htmlFor="number">Phone Number</label>
           <div className="tf">
             <input
               type="tel"
@@ -70,7 +67,6 @@ function App() {
           </div>
         </div>
         <div className="row">
-          <label htmlFor="company">Company Name</label>
           <br />
           <div className="tf">
             <input
