@@ -7,22 +7,33 @@ function App() {
     email: "jason@gmail.com",
     phone: "jason@gmail.com",
     company: "Yellow.ai",
-    industry: "Healthcare"
-  })
+    industry: "Healthcare",
+  });
 
   const onChangeHandler = (e) => {
-    console.log(e)
+    console.log(e);
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-    console.log(formData)
-  }
+      [e.target.name]: e.target.value,
+    });
+    console.log(formData);
+  };
 
   const onSubmitHandler = (e) => {
-    e.preventDefault()
-    console.log(formData)
-  }
+    e.preventDefault();
+    window.parent.postMessage(
+      JSON.stringify({
+        event_code: "ym-client-event",
+        data: JSON.stringify({
+          event: {
+            code: "userdetails",
+            data: formData,
+          },
+        }),
+      }),
+      "*"
+    );
+  };
 
   return (
     <div className="container">
@@ -34,7 +45,7 @@ function App() {
               id="name"
               name="name"
               value="Jason"
-              onChange = {onChangeHandler}
+              onChange={onChangeHandler}
               required
             />
             <br />
@@ -47,7 +58,7 @@ function App() {
               id="email"
               name="email"
               value="jason@gmail.com"
-              onChange = {onChangeHandler}
+              onChange={onChangeHandler}
               required
             />
             <br />
@@ -60,7 +71,7 @@ function App() {
               id="phone"
               name="phone"
               value="+14096731904"
-              onChange = {onChangeHandler}
+              onChange={onChangeHandler}
               required
             />
             <br />
@@ -73,7 +84,7 @@ function App() {
               id="company"
               name="company"
               value="Yellow.ai"
-              onChange = {onChangeHandler}
+              onChange={onChangeHandler}
               required
             />
           </div>
@@ -84,7 +95,7 @@ function App() {
               value="Healthcare"
               className="form-inputs"
               name="industry"
-              onChange = {onChangeHandler}
+              onChange={onChangeHandler}
               required
             >
               <option value="Restaurant">Restaurant</option>
