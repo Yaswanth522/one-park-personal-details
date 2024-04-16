@@ -30,8 +30,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input
 }
 
 button {
-  background-color: #29568E;
-  border: 1px solid #29568E;
+  background-color: #4E8020;
+  border: 1px solid #4E8020;
   border-radius: 30px;
   font-size: 11px;
   display: block;
