@@ -30,8 +30,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input
 }
 
 button {
-  background-color: #29568E;
-  border: 1px solid #29568E;
+  background-color: #4E8020;
+  border: 1px solid #4E8020;
   border-radius: 30px;
   font-size: 11px;
   display: block;
@@ -48,7 +48,7 @@ button {
 button:focus,button:hover
 {
 	outline:none;
-	background-color:#87b8f3;
+	background-color:#8AB752;
 	cursor:pointer;
 	color:black;
 }
@@ -77,7 +77,7 @@ button:focus,button:hover
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #e8f9d2;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -89,17 +89,17 @@ button:focus,button:hover
   width: 20px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: #8AB752;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #29568E;
+  background-color: #4E8020;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #29568E;
+  box-shadow: 0 0 1px #4E8020;
 }
 
 input:checked + .slider:before {
@@ -117,3 +117,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.form-heading{
+  color: #4E8020;
+}

@@ -3,17 +3,19 @@ import { useState } from "react";
 
 function App() {
   const [formData, setFormData] = useState({
-    "current-business-structure": "Partnership",
-    "state": "CA",
-    "have-checking-account": "off",
-    "active-bankruptcy": "off"
+    "company-name": "Yellow.ai",
+    "business-type": "Limited Liability Company(LLC)",
+    "industry": "Others"
   });
 
   const onChangeHandler = (e) => {
-    let returnedValue = e.target.value
-    if(e.target.name === "have-checking-account" || e.target.name === "active-bankruptcy") {
-      returnedValue = returnedValue === "on" ? "Yes" : "No"
-    }
+    let returnedValue = e.target.value;
+    // if (
+    //   e.target.name === "have-checking-account" ||
+    //   e.target.name === "active-bankruptcy"
+    // ) {
+    //   returnedValue = returnedValue === "on" ? "Yes" : "No";
+    // }
     setFormData({
       ...formData,
       [e.target.name]: returnedValue,
@@ -38,14 +40,27 @@ function App() {
 
   return (
     <div className="container">
+      <h2 className="form-heading">Company information </h2>
       <form onSubmit={onSubmitHandler}>
         <div className="row">
-          <label htmlFor="current-business-structure">
-            Current Business Structure
-          </label>
+        <label htmlFor="company-name">Name</label>
+          <div className="tf">
+            <input
+              type="text"
+              id="company-name"
+              name="company-name"
+              value={formData["company-name"]}
+              onChange={onChangeHandler}
+              required
+            />
+            <br />
+          </div>
+        </div>
+        <div className="row">
+          <label htmlFor="business-type">Business Type</label>
           <div>
             <select
-              value={formData["current-business-structure"]}
+              value={formData["business-type"]}
               className="form-inputs"
               name="current-business-structure"
               onChange={onChangeHandler}
@@ -58,10 +73,29 @@ function App() {
               </option>
               <option value="C Corporation">C Corporation</option>
               <option value="S Corporation">S Corporation</option>
+              <option value="Others">Others</option>
             </select>
           </div>
         </div>
         <div className="row">
+        <label htmlFor="industry">Industry</label>
+          <div className="tf">
+            <select
+              value={formData.industry}
+              className="form-inputs"
+              name="industry"
+              onChange={onChangeHandler}
+              required
+            >
+              <option value="Restaurant">Restaurant</option>
+              <option value="Healthcare">Healthcare</option>
+              <option value="Construction">Construction</option>
+              <option value="Hospitality">Hospitality</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+        </div>
+        {/* <div className="row">
           <label htmlFor="state">State</label>
           <div>
             <select
@@ -124,8 +158,8 @@ function App() {
               <option value="WY">Wyoming</option>
             </select>
           </div>
-        </div>
-        <div className="row">
+        </div> */}
+        {/* <div className="row">
           <label htmlFor="have-checking-account">
             Do you have a business checking account?
           </label>
@@ -146,8 +180,8 @@ function App() {
               <span className="slider round"></span>
             </label>
           </div>
-        </div>
-        <button type="submit">Submit</button>
+        </div> */}
+        <button type="submit">Next</button>
       </form>
     </div>
   );
