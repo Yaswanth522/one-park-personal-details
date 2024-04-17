@@ -32,6 +32,8 @@ input[type="text"]:focus,input[type="email"]:focus,input[type="tel"]:focus,input
 button {
   background-color: #4E8020;
   border: 1px solid #4E8020;
+  background-color: #4E8020;
+  border: 1px solid #4E8020;
   border-radius: 30px;
   font-size: 11px;
   display: block;
@@ -48,6 +50,7 @@ button {
 button:focus,button:hover
 {
 	outline:none;
+	background-color:#8AB752;
 	background-color:#8AB752;
 	cursor:pointer;
 	color:black;
